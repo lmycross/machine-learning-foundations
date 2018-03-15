@@ -5,13 +5,11 @@ import random
 trainset = np.loadtxt('train.txt')  
 testset = np.loadtxt('test.txt')  
 
-
 xt=testset[:,:-1]
 yt=testset[:,-1]
 at,bt=xt.shape
 xt0=np.ones((at,1))
 xt=np.concatenate((xt0,xt),axis=1) 
-
 
 num=0
 
@@ -39,9 +37,7 @@ def test(inputs,w,yt):
     return error
 
 for s in range(2000):
-    
-
-   
+       
     x=trainset[:,:-1]
     a,b=x.shape
     y=trainset[:,-1]
