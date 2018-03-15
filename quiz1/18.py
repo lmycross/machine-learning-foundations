@@ -14,11 +14,17 @@ at,bt=xt.shape
 
 num=0
 
+def sign(input):
+    if input<=0:
+        return -1
+    else:
+        return 1
+    
 def check(xran,w,y):
     wrong=0
     for i in range(a):
         h=xran[i,:].dot(w)
-        if (h<=0 and y[i]==1) or (h>0 and y[i]==-1):
+        if sign(h) != y  :
             wrong+=1
     return wrong
 
